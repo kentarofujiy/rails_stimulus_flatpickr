@@ -5,6 +5,7 @@
   <%= link_to appointment_path(appointment),
       method: :delete,
       remote: true,
+      inline: true,
       class: "btn btn-danger col-sm-1" do %>
       <i class="fas fa-times"></i>
   <% end %>

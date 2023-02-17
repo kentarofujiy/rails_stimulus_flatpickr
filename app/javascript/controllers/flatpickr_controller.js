@@ -7,6 +7,7 @@ import "flatpickr/dist/themes/dark.css";
 // import the translation files and create a translation mapping
 import { French } from "flatpickr/dist/l10n/fr.js";
 import { english } from "flatpickr/dist/l10n/default.js";
+import   "flatpickr/dist/plugins/rangePlugin";
 
 // create a new Stimulus controller by extending stimulus-flatpickr wrapper controller
 export default class extends Flatpickr {
@@ -18,8 +19,10 @@ export default class extends Flatpickr {
   connect() {
     //define locale and global flatpickr settings for all datepickers
     this.config = {
+      mode: "range",
       locale: this.locale,
       altInput: true,
+      inline: true,
       showMonths: 2
     };
 
